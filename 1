@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario interactivo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+      button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0069d9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulario interactivo</h1>
+    <form id="formulario">
+        <label>Seleccione su motor:</label>
+        <input type="radio" name="motor" value="AXIAL" id="axial" />
+        <label for="axial">AXIAL</label>
+        <input type="radio" name="motor" value="PWR" id="pwr" />
+        <label for="pwr">PWR</label>
+        <input type="radio" name="motor" value="CD" id="cd" />
+        <label for="cd">CD</label>
+        <button type="button" onclick="mostrarPreguntas()">Continuar</button>
+      
+        <div id="preguntas" style="display: none;">
+          <p>El portón no abre:</p>
+          <input type="radio" name="pregunta1" value="Si" id="pregunta1-si" />
+          <label for="pregunta1-si">Si</label>
+          <input type="radio" name="pregunta1" value="No" id="pregunta1-no" />
+          <label for="pregunta1-no">No</label>
+      
+          <div id="pregunta2" style="display: none;">
+            <p>¿Se escucha que algo camina pero el portón no se mueve?</p>
+            <input type="radio" name="pregunta2" value="Si" id="pregunta2-si" />
+            <label for="pregunta2-si">Si</label>
+            <input type="radio" name="pregunta2" value="No" id="pregunta2-no" />
+            <label for="pregunta2-no">No</label>
+          </div>
+      
+          <div id="respuesta1-si" style="display: none;">
+            <p>Desbloquear el sistema para abrir y cerrar manualmente el portón y revisar si el funcionamiento es suave y constante en todo el recorrido. Revisar si hay algún obstáculo que haga que el portón se atore, guías torcidas o con mugre o cosas atoradas, bisagras en mal estado, roza en algún lado, etc.</p>
+            <p>Agendar servicio:</p>
+            <button type="button">Sí</button>
+            <button type="button" onclick="mostrarPreguntas()">No</button>
+          </div>
+      
+          <div id="respuesta1-no" style="display: none;">
+            <p>¿Abre un control y el otro/s no? No abre con ningún control, pero sí con la botonera. ¿No abre con la botonera pero sí con el control? ¿No abre con control ni con botonera?</p>
+            <input type="radio" name="respuesta1-no" value="Abre un control y el otro/s no" id="respuesta1-no1" />
+            <label for="respuesta1-no1">Abre un control y el otro/s no</label>
+            <input type="radio" name="respuesta1-no" value="No abre con ningún control, pero sí con la botonera" id="respuesta1-no2" />
+            <label for="respuesta1-no2">No abre con ningún control, pero sí con la botonera</label>
+            <input type="radio" name="respuesta1-no" value="No abre con la botonera pero sí
+      
+
+    <script>
+      function mostrarPreguntas() {
+        var formulario = document.getElementById("formulario");
+        var motorSeleccionado = formulario.elements["motor"].value;
+
+      
+      }
+    </script>
+  </body>
+</html>
