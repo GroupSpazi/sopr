@@ -1,88 +1,409 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Formulario interactivo</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-      }
-      h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-      label {
-        display: block;
-        margin-bottom: 5px;
-      }
-      input[type="radio"] {
-        margin-right: 5px;
-      }
-      button {
-        margin-top: 10px;
-        padding: 5px 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #0069d9;
-      }
-    </style>
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from demo-vcard-v3.dbcsoft.net/v-premium-02 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Feb 2023 20:24:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="dT2Fn147udcUQbfpbVa02lPLLn62eqJED573feB7">
+
+  <title>Soporte tecnico - VCard Grupo Spazi</title>
+
+  <meta name="description" content="Premium vCard">
+  <link rel='shortcut icon' type='image/x-icon' href="public/dist/images/favicon5564.png">
+
+<!-- color de barra -->
+  <meta name="theme-color" content="#10316e">
+<!-- color de barra -->
+
+
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="http://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  <link href="public/dist/js/main.min5564.js?v=20230218212729264617" rel="preload" as="script">
+  <link href="public/dist/js/common.min5564.js?v=20230218212729264617" rel="preload" as="script">
+
+
+  <!-- Scripts -->
+  <script src="public/dist/js/main.min5564.js?v=20230218212729264617"></script>
+  <script src="public/dist/vendor/sweetalert/sweetalert.min5564.js?v=20230218212729264617"></script>
+  <script src="public/dist/vendor/slick/slick.min5564.js?v=20230218212729264617"></script>
+  <script src="public/dist/js/common.min5564.js?v=20230218212729264617"></script>
+
+  
+  
+  <link href="css/barmenu.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <link href="css/solucionador.css" rel="stylesheet">
+  
+  <!-- Styles -->
+
+  <link href="public/dist/css/main.min5564.css?v=20230218212729264617" rel="stylesheet">
+  <link href="public/dist/vendor/sweetalert/sweetalert.min5564.css?v=20230218212729264617" rel="stylesheet">
+  <link href="public/dist/vendor/slick/slick5564.css?v=20230218212729264617" rel="stylesheet">
+  <link href="public/dist/vendor/slick/slick-theme5564.css?v=20230218212729264617" rel="stylesheet">
+
+  <link href="public/dist/css/custom5564.css?v=20230218212729264617" rel="stylesheet">
+
+    <meta property="og:url" content="https://vcard.grupospazi.mx/v-premium-02.html" />
+<meta property="og:title" content="Ing.Javier Alejandro Suarez - Grupo Spazi Matriz" />
+<meta property="og:description" content="Director general de la empresa Grupo Spazi desde 1987, especializado en automatización residencial, comercial e industrial, así como la fabricación, venta y distribución de marca Spazi.
+Con 35 años de experiencia en México." />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://vcard.grupospazi.mx/frontend/themes/default/assets/img/logos/85564.jpg?v=20230218212729264617" />
+<meta property="og:image:alt" content="Logo" />
+<meta property="og:updated_time" content="2023-02-24 20:24:55" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Ing.Javier Alejandro Suarez - Grupo Spazi Matriz" />
+<meta name="twitter:description" content="Director general de la empresa Grupo Spazi desde 1987, especializado en automatización residencial, comercial e industrial, así como la fabricación, venta y distribución de marca Spazi.
+Con 35 años de experiencia en México." />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-200L0464X7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-200L0464X7');
+  </script>
+<link href="public/dist/css/themes/premium-02/style.min5564.css?v=20230218212729264617" rel="stylesheet">
   </head>
-  <body>
-    <h1>Formulario interactivo</h1>
-    <form id="formulario">
-        <label>Seleccione su motor:</label>
-        <input type="radio" name="motor" value="AXIAL" id="axial" />
-        <label for="axial">AXIAL</label>
-        <input type="radio" name="motor" value="PWR" id="pwr" />
-        <label for="pwr">PWR</label>
-        <input type="radio" name="motor" value="CD" id="cd" />
-        <label for="cd">CD</label>
-        <button type="button" onclick="mostrarPreguntas()">Continuar</button>
-      
-        <div id="preguntas" style="display: none;">
-          <p>El portón no abre:</p>
-          <input type="radio" name="pregunta1" value="Si" id="pregunta1-si" />
-          <label for="pregunta1-si">Si</label>
-          <input type="radio" name="pregunta1" value="No" id="pregunta1-no" />
-          <label for="pregunta1-no">No</label>
-      
-          <div id="pregunta2" style="display: none;">
-            <p>¿Se escucha que algo camina pero el portón no se mueve?</p>
-            <input type="radio" name="pregunta2" value="Si" id="pregunta2-si" />
-            <label for="pregunta2-si">Si</label>
-            <input type="radio" name="pregunta2" value="No" id="pregunta2-no" />
-            <label for="pregunta2-no">No</label>
-          </div>
-      
-          <div id="respuesta1-si" style="display: none;">
-            <p>Desbloquear el sistema para abrir y cerrar manualmente el portón y revisar si el funcionamiento es suave y constante en todo el recorrido. Revisar si hay algún obstáculo que haga que el portón se atore, guías torcidas o con mugre o cosas atoradas, bisagras en mal estado, roza en algún lado, etc.</p>
-            <p>Agendar servicio:</p>
-            <button type="button">Sí</button>
-            <button type="button" onclick="mostrarPreguntas()">No</button>
-          </div>
-      
-          <div id="respuesta1-no" style="display: none;">
-            <p>¿Abre un control y el otro/s no? No abre con ningún control, pero sí con la botonera. ¿No abre con la botonera pero sí con el control? ¿No abre con control ni con botonera?</p>
-            <input type="radio" name="respuesta1-no" value="Abre un control y el otro/s no" id="respuesta1-no1" />
-            <label for="respuesta1-no1">Abre un control y el otro/s no</label>
-            <input type="radio" name="respuesta1-no" value="No abre con ningún control, pero sí con la botonera" id="respuesta1-no2" />
-            <label for="respuesta1-no2">No abre con ningún control, pero sí con la botonera</label>
-            <input type="radio" name="respuesta1-no" value="No abre con la botonera pero sí
-      
 
-    <script>
-      function mostrarPreguntas() {
-        var formulario = document.getElementById("formulario");
-        var motorSeleccionado = formulario.elements["motor"].value;
+<body>
+ 
 
-      
+
+<div id="vcard-box-wrapper">
+  <div class="page-body">
+  <!-- Your Card -->
+  <div class="container-fluid">
+    <div class="row row-cards justify-content-sm-center">
+      <div class="col-md-8 col-sm-12">
+        <div id="vcard-box">
+
+  <div class="vcard vcard-premium-02">
+
+  <div class="vcard-details">
+  <div class="vcard-header">
+    <div class="bg-light overflow-hidden">
+            <div class="cover">
+        <div class="cover-img">
+          <span></span>
+        </div>
+      </div>
+            <div class="profile">
+        <div class="row">
+          <div class="col-6">
+            <div class="profile-image">
+              <img src="frontend/themes/default/assets/img/logos/85564.jpg?v=20230218212729264617" alt="Ing.Javier Alejandro" class="rounded img-thumbnail">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="profile-contact">
+              <a href="vc/download/v-premium-02.vcf" class="btn btn-primary btn-add-contact">
+                <i class="ti ti-plus"></i> Añadir Contacto</a>
+                              <a href="mailto:jsuarez@grupospazi.mx" target="_blank" class="media vcard-item-link">
+                  <span class="mr-3 ripple"><i class="ti ti-mail"></i></span>
+                </a>
+                          </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="profile-title">
+              <h4 class="mt-0 mb-0 company-name">Grupo Spazi Matriz</h4>
+              <h4 class="mt-0 mb-0 company-name">Soporte Tecnico</h4>
+              <span class="user-status">
+                                    <span class="user-status">Director general de la empresa Grupo Spazi desde 1987, especializado en automatización residencial, comercial e industrial, así como la fabricación, venta y distribución de marca Spazi.<br/>Con 35 años de experiencia en México.</span>
+                              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="https://front.codes/" class="logo" target="_blank">
+   
+</a>	
+
+<div class="section over-hide">
+    <div class="container">
+        <div class="row full-height justify-content-center">
+            <div class="col-12 text-center align-self-center py-5">
+                <div class="section text-center py-5 py-md-0">
+                      <input class="pricing" type="checkbox" id="pricing" name="pricing"/>
+                      <label for="pricing">
+                        <span class="block-diff">HOGAR</span>
+                        <span class="float-right">- INSTALADOR</span>
+                    </label>
+                    <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+                            <div class="card-front">
+                                <div class="pricing-wrap">
+                                    <h4 class="mb-5">Kayaking</h4>
+                                    <h2 class="mb-2"><sup>$</sup>39 / 4<sup>hrs</sup></h2>
+                                    <p class="mb-4">per person</p>
+                                    <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+                                    <p class="mb-4">Drina, Serbia</p>
+                                    <a href="#0" class="link">Choose Date</a>
+                                    <div class="img-wrap img-2">
+                                        <img src="frontend/themes/default/assets/img/galeria/sea_1.png" alt="">
+                                    </div>
+                                    <div class="img-wrap img-1">
+                                        <img src="frontend/themes/default/assets/img/galeria/reja.png" alt="">
+                                    </div>
+                                    <div class="img-wrap img-3">
+                                        <img src="frontend/themes/default/assets/img/galeria/agua-salpicada.png" alt="">
+                                    </div>
+                                    <div class="img-wrap img-6">
+                                        <img src="https://assets.codepen.io/1462889/Stone.png" alt="">
+                                    </div>
+                                  </div>
+                              </div>
+                            <div class="card-back">
+                                <div class="pricing-wrap">
+                                    <h4 class="mb-5">Camping</h4>
+                                    <h2 class="mb-2"><sup>$</sup>29 / 8<sup>hrs</sup></h2>
+                                    <p class="mb-4">per person</p>
+                                    <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+                                    <p class="mb-4">Tara, Serbia</p>
+                                    <a href="#0" class="link">Choose Date</a>
+                                    <div class="img-wrap img-2">
+                                        <img src="https://assets.codepen.io/1462889/grass.png" alt="">
+                                    </div>
+                                    <div class="img-wrap img-4">
+                                        <img src="https://assets.codepen.io/1462889/camp.png" alt="">
+                                    </div>
+                                    <div class="img-wrap img-5">
+                                        <img src="https://assets.codepen.io/1462889/Ivy.png" alt="">
+                                    </div>
+                                    <div class="img-wrap img-7">
+                                        <img src="https://assets.codepen.io/1462889/IvyRock.png" alt="">
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    $(function() {
+      $(".js-show-more" ).click(function() {
+        $('.vcard-header .description').addClass('open');
+      });
+    })
+  </script>
+</div>
+
+<script>
+	$(document).ready(function() {
+			$(document).click(function(e) {
+				var target = $(e.target);
+				if (target.closest('.float-button-btn').length) {
+					$('.float-button').toggleClass('active');
+				} else {
+					$('.float-button').removeClass('active');
+				}
+			});
+	});
+</script>
+  </div>
+
+<style>
+  </style>
+<script>
+  var vCard_Preview = {
+    CONSTS: {
+      currentVcardColor: '#f76707'
+    },
+    SELECTORS: {
+      cardBox: '#vcard-box',
+    },
+    init: function() {
+      var todayIndex = new Date().getDay() - 1;
+      if (todayIndex === -1) {
+        todayIndex = 6;
       }
-    </script>
-  </body>
+      
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-contact .ripple').css('background-color', vCard_Preview.CONSTS.currentVcardColor);
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-contact-extras .ripple').css('background-color', vCard_Preview.CONSTS.currentVcardColor);
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-header .line-separator-50').css('background-color', vCard_Preview.CONSTS.currentVcardColor);
+      $(vCard_Preview.SELECTORS.cardBox).find('.line-separator').css('background-color', vCard_Preview.CONSTS.currentVcardColor);
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-block .vcard-block-title').css('border-color', vCard_Preview.CONSTS.currentVcardColor);
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-block .opening-hours li').not(".opening-hours__header").eq(todayIndex).addClass('today');
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-block .opening-hours li.today').css('color', vCard_Preview.CONSTS.currentVcardColor);
+      $(vCard_Preview.SELECTORS.cardBox).find('.add-to-contact .btn-add-to-contact').css('background-color', vCard_Preview.CONSTS.currentVcardColor);
+      // For minimal theme
+      $(vCard_Preview.SELECTORS.cardBox).find('.v-business-hours .business-hours-item').eq(todayIndex).addClass('today');
+
+      // For business
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-business .vcard-extras-list .extra-item a').css('border-color', vCard_Preview.CONSTS.currentVcardColor);
+
+      // For premium theme
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-premium .vcard-block').css('border-color', vCard_Preview.CONSTS.currentVcardColor);
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-premium .vcard-details .vcard-header .description').css('border-color', vCard_Preview.CONSTS.currentVcardColor);
+      $(vCard_Preview.SELECTORS.cardBox).find('.vcard-premium .profile-image .img-thumbnail').css('border-color', vCard_Preview.CONSTS.currentVcardColor);
+
+            $('#main-add-to-contact').css('display', 'none');
+      
+                            }
+  };
+
+$(function() {
+  vCard_Preview.init();
+});
+</script>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="main-add-to-contact" class="add-to-contact">
+    <a href="vc/download/v-premium-02.vcf" class="btn btn-primary btn-add-to-contact"><i class="ti ti-id"></i>&nbsp; Añadir Contacto</a>
+  </div>
+
+</div>
+      </main>
+
+      <!-- Footer -->
+      <div class="footer">
+    <div class="copyright text-center">
+        <p>Copyright © <a href='index.html'>Grupo Spazi.</a> 2023</p>
+    </div>
+    <div class="hide">
+        <form id="form_logout" method="post" action="https://demo-vcard-v3.dbcsoft.net/logout">
+            <input type="hidden" name="_token" value="dT2Fn147udcUQbfpbVa02lPLLn62eqJED573feB7">        </form>
+    </div>
+</div>
+
+    </div>
+
+
+    <!-- barra -->
+    <div id=""page" class="site">
+      <nav>
+        <ul>
+          <li class="list"><a href="manuales.html"><i class="ri-file-pdf-line"></i><span class="text">Manuales</span></a></li>
+          <li class="list"><a href="fichas-tecnicas.html"><i class="ri-profile-line"></i><span class="text">Flyers</span></a></li>
+          
+          <li class="list"><a href="#"><i class="ri-shopping-bag-line"></i><span class="text">Promociones</span></a></li>
+          <li class="list"><a href="https://wa.link/70lcoi"><i class="ri-whatsapp-line"></i><span class="text">WhatsApp</span></a></li>
+          
+        </ul>
+      </nav>
+  </div>
+  <!--  barra -->
+    
+    
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-236599435-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-236599435-1');
+  </script>
+  </div>
+</body>
+
+
+<!-- Mirrored from demo-vcard-v3.dbcsoft.net/v-premium-02 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Feb 2023 20:24:49 GMT -->
 </html>
