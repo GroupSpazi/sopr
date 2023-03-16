@@ -413,3 +413,11 @@ a:hover {
 	width: auto;
 	display: block;
 }
+
+
+
+.float-right {
+    position: relative;
+    top: -10px;
+  }
+  
